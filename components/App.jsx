@@ -6,7 +6,7 @@ const App = () => {
     <>
       <h1>Hello world from client</h1>
       <br />
-      <Counter hiFrom="naman360" />
+      <Counter/>
     </>
   );
 };

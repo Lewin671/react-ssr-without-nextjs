@@ -1,12 +1,18 @@
-import React from "react";
+import React, { useState } from 'react'
 
-const Counter = ({ hiFrom }) => {
+const Counter = () => {
+  const [count, setCount] = useState(0)
+
+  const handleClick = () => {
+    setCount(count + 1)
+  }
+
   return (
-    <h2>
-      hi from {hiFrom}, <br /> A counter button should be here, but state won't
-      work on server :)
-    </h2>
-  );
-};
+    <div>
+      <button onClick={handleClick}>Clicked {count} times</button>
+      <p>Note: State updates require client-side hydration to work.</p>
+    </div>
+  )
+}
 
-export default Counter;
+export default Counter
